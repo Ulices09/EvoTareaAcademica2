@@ -9,3 +9,9 @@ C:\Users\win7\Desktop\EvolucionTA2\EvolucionTA2\bin\Debug\EvolucionTA2.exe
 C:\Users\win7\Desktop\EvolucionTA2\EvolucionTA2\bin\Debug\EvolucionTA2.pdb
 C:\Users\win7\Desktop\EvolucionTA2\EvolucionTA2\obj\Debug\EvolucionTA2.exe
 C:\Users\win7\Desktop\EvolucionTA2\EvolucionTA2\obj\Debug\EvolucionTA2.pdb
+D:\Evolucion\EvolucionTA2\EvolucionTA2\EvolucionTA2\bin\Debug\EvolucionTA2.exe.config
+D:\Evolucion\EvolucionTA2\EvolucionTA2\EvolucionTA2\obj\Debug\EvolucionTA2.exe
+D:\Evolucion\EvolucionTA2\EvolucionTA2\EvolucionTA2\obj\Debug\EvolucionTA2.pdb
+D:\Evolucion\EvolucionTA2\EvolucionTA2\EvolucionTA2\bin\Debug\EvolucionTA2.exe
+D:\Evolucion\EvolucionTA2\EvolucionTA2\EvolucionTA2\bin\Debug\EvolucionTA2.pdb
+D:\Evolucion\EvolucionTA2\EvolucionTA2\EvolucionTA2\obj\Debug\EvolucionTA2.csprojResolveAssemblyReference.cache

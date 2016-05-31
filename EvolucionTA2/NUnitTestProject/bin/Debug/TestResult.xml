@@ -1,26 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\win7\Desktop\EvolucionTA2\NUnitTestProject\bin\Debug\NUnitTestProject.dll" total="12" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2016-05-24" time="21:52:14">
-  <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.8689" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Users\win7\Desktop\NUnit-2.6.4\bin" machine-name="ULICES-PC" user="win7" user-domain="ULICES-PC" />
-  <culture-info current-culture="es-ES" current-uiculture="es-ES" />
-  <test-suite type="Assembly" name="C:\Users\win7\Desktop\EvolucionTA2\NUnitTestProject\bin\Debug\NUnitTestProject.dll" executed="True" result="Success" success="True" time="0.180" asserts="0">
+<test-results name="D:\Evolucion\EvolucionTA2\EvolucionTA2\NUnitTestProject\bin\Debug\NUnitTestProject.dll" total="18" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2016-05-31" time="11:41:57">
+  <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.8689" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files\NUnit-2.6.4\bin" machine-name="ASUS" user="Petith" user-domain="asus" />
+  <culture-info current-culture="es-PE" current-uiculture="es-ES" />
+  <test-suite type="Assembly" name="D:\Evolucion\EvolucionTA2\EvolucionTA2\NUnitTestProject\bin\Debug\NUnitTestProject.dll" executed="True" result="Success" success="True" time="0.066" asserts="0">
     <results>
-      <test-suite type="Namespace" name="NUnitTestProject" executed="True" result="Success" success="True" time="0.174" asserts="0">
+      <test-suite type="Namespace" name="NUnitTestProject" executed="True" result="Success" success="True" time="0.065" asserts="0">
         <results>
-          <test-suite type="TestFixture" name="NUnitTest" executed="True" result="Success" success="True" time="0.173" asserts="0">
+          <test-suite type="TestFixture" name="NUnitTest" executed="True" result="Success" success="True" time="0.064" asserts="0">
             <results>
-              <test-case name="NUnitTestProject.NUnitTest.TestDivision" executed="True" result="Success" success="True" time="0.102" asserts="1" />
-              <test-case name="NUnitTestProject.NUnitTest.TestGetDato" executed="True" result="Success" success="True" time="0.001" asserts="1" />
-              <test-case name="NUnitTestProject.NUnitTest.TestGetLetra" executed="True" result="Success" success="True" time="0.006" asserts="1" />
-              <test-case name="NUnitTestProject.NUnitTest.TestGetLista" executed="True" result="Success" success="True" time="0.005" asserts="1" />
-              <test-case name="NUnitTestProject.NUnitTest.TestGetPersonaByCodigo" executed="True" result="Success" success="True" time="0.002" asserts="3" />
-              <test-case name="NUnitTestProject.NUnitTest.TestGetPersonaByNombre" executed="True" result="Success" success="True" time="0.001" asserts="3" />
+              <test-case name="NUnitTestProject.NUnitTest.TestDivision" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+              <test-case name="NUnitTestProject.NUnitTest.TestGetCantidadPersonas" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+              <test-case name="NUnitTestProject.NUnitTest.TestGetDato" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="NUnitTestProject.NUnitTest.TestGetLetra" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="NUnitTestProject.NUnitTest.TestGetLista" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="NUnitTestProject.NUnitTest.TestGetPersonaByCodigo" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+              <test-case name="NUnitTestProject.NUnitTest.TestGetPersonaByNombre" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+              <test-case name="NUnitTestProject.NUnitTest.TestGetPersonaPorCodigo" executed="True" result="Success" success="True" time="0.000" asserts="3" />
               <test-case name="NUnitTestProject.NUnitTest.TestGetPersonas" executed="True" result="Success" success="True" time="0.000" asserts="1" />
               <test-case name="NUnitTestProject.NUnitTest.TestIngresoDato" executed="True" result="Success" success="True" time="0.001" asserts="1" />
               <test-case name="NUnitTestProject.NUnitTest.TestMultiplicar" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-              <test-case name="NUnitTestProject.NUnitTest.TestNumeroEncontrado" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+              <test-case name="NUnitTestProject.NUnitTest.TestNumeroEncontrado" executed="True" result="Success" success="True" time="0.000" asserts="1" />
               <test-case name="NUnitTestProject.NUnitTest.TestParOImpar" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-              <test-case name="NUnitTestProject.NUnitTest.TestRestar" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+              <test-case name="NUnitTestProject.NUnitTest.TestPersonaExiste" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="NUnitTestProject.NUnitTest.TestRestar" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+              <test-case name="NUnitTestProject.NUnitTest.TestSeModificoPersona" executed="True" result="Success" success="True" time="0.004" asserts="1" />
+              <test-case name="NUnitTestProject.NUnitTest.TestValidarApellido" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+              <test-case name="NUnitTestProject.NUnitTest.TestValidarNombre" executed="True" result="Success" success="True" time="0.000" asserts="1" />
             </results>
           </test-suite>
         </results>

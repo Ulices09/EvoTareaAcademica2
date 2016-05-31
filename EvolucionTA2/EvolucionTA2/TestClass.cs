@@ -5,6 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.OleDb;
 
+using System.Data;
+using System.Data.Sql;
+using System.Data.SqlClient;
+
 namespace EvolucionTA2
 {
     public class TestClass
@@ -135,24 +139,28 @@ namespace EvolucionTA2
         }
 
         //Archivos
-        private OleDbConnection AccesoDatos()
+        private SqlConnection AccesoDatos()
         {
-            OleDbConnectionStringBuilder b = new OleDbConnectionStringBuilder();
-            b.Provider = "Microsoft.ACE.OLEDB.12.0";
-            b.DataSource = "Personas.accdb";
-            OleDbConnection conexion = new OleDbConnection(b.ToString());
-            return conexion;
+            try
+            {
+                SqlConnection cn = new SqlConnection("Server=.;Database=EvolucionTA2;Trusted_Connection=true;");
+                return cn;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("No se puede establecer conexión con la base de datos ", ex);
+            }
         }
 
         public Persona GetPersonaPorCodigo(int codigo){
 
-            OleDbConnection conexion = AccesoDatos();
+            SqlConnection conexion = AccesoDatos();
             List<Persona> lista = new List<Persona>();
             conexion.Open();
             string query = "SELECT * FROM Persona WHERE Codigo = {0}";
             string comando = String.Format(query, codigo);
-            OleDbCommand cmd = new OleDbCommand(comando, conexion);
-            OleDbDataReader r = cmd.ExecuteReader();
+            SqlCommand cmd = new SqlCommand(comando, conexion);
+            SqlDataReader r = cmd.ExecuteReader();
             while (r.Read())
             {
                 Persona p = new Persona();
@@ -168,13 +176,13 @@ namespace EvolucionTA2
         public List<Persona> GetPersonasPorNombre(string nombre)
         {
 
-            OleDbConnection conexion = AccesoDatos();
+            SqlConnection conexion = AccesoDatos();
             List<Persona> lista = new List<Persona>();
             conexion.Open();
             string query = "SELECT * FROM Persona WHERE Nombre = '{0}'";
             string comando = String.Format(query, nombre);
-            OleDbCommand cmd = new OleDbCommand(comando, conexion);
-            OleDbDataReader r = cmd.ExecuteReader();
+            SqlCommand cmd = new SqlCommand(comando, conexion);
+            SqlDataReader r = cmd.ExecuteReader();
             while (r.Read())
             {
                 Persona p = new Persona();
@@ -189,13 +197,13 @@ namespace EvolucionTA2
 
         public int GetCantidadPersonas()
         {
-            OleDbConnection conexion = AccesoDatos();
+            SqlConnection conexion = AccesoDatos();
             List<Persona> lista = new List<Persona>();
             conexion.Open();
             string query = "SELECT * FROM Persona";
             string comando = String.Format(query);
-            OleDbCommand cmd = new OleDbCommand(comando, conexion);
-            OleDbDataReader r = cmd.ExecuteReader();
+            SqlCommand cmd = new SqlCommand(comando, conexion);
+            SqlDataReader r = cmd.ExecuteReader();
             while (r.Read())
             {
                 Persona p = new Persona();
@@ -208,19 +216,18 @@ namespace EvolucionTA2
             return lista.Count;
         }
 
-        public void AgregarPersona(string nombre, string apellido)
+        public void ModificarPersona(int codigo, string nombre, string apellido)
         {
-            if (String.IsNullOrEmpty(nombre)) throw new ArgumentException("No existe nombre");
-            else if (String.IsNullOrEmpty(apellido)) throw new ArgumentException("No existe apellido");
+            if (String.IsNullOrEmpty(nombre)) throw new ArgumentException("Ingrese un nombre");
+            else if (String.IsNullOrEmpty(apellido)) throw new ArgumentException("Ingrese un apellido");
 
-            OleDbConnection conexion = AccesoDatos();
-            List<Persona> lista = new List<Persona>();
+            SqlConnection conexion = AccesoDatos();
             conexion.Open();
-            string query = "INSERT INTO Persona (Nombre, Apellido) VALUES('{0}','{1}')";
-            string comando = String.Format(query, nombre, apellido);
-            OleDbCommand cmd = new OleDbCommand(comando, conexion);
+            string query = "UPDATE Persona SET Nombre = '{0}', Apellido = '{1}' WHERE Codigo = {2}";
+            string comando = String.Format(query, nombre, apellido, codigo);
+            SqlCommand cmd = new SqlCommand(comando, conexion);
             cmd.ExecuteNonQuery();
-            throw new Exception("Persona agregada");
+            throw new Exception("Persona modificada");
         }
 
     }

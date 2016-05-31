@@ -160,7 +160,7 @@ namespace NUnitTestProject
         {
             TestClass objeto = new TestClass();
             int cantidad = objeto.GetCantidadPersonas();
-            Assert.AreEqual(5, cantidad);
+            Assert.AreEqual(6, cantidad);
         }
 
         [Test]
@@ -177,11 +177,11 @@ namespace NUnitTestProject
             try
             {
                 TestClass objeto = new TestClass();
-                objeto.AgregarPersona(null, "Veliz");
+                objeto.ModificarPersona(8, null, "Veliz");
             }
             catch (Exception ex)
             {
-                Assert.AreEqual("No existe nombre", ex.Message);
+                Assert.AreEqual("Ingrese un nombre", ex.Message);
             }
             
         }
@@ -192,25 +192,25 @@ namespace NUnitTestProject
             try
             {
                 TestClass objeto = new TestClass();
-                objeto.AgregarPersona("Luis", null);
+                objeto.ModificarPersona(8, "Luis", null);
             }
             catch (Exception ex)
             {
-                Assert.AreEqual("No existe apellido", ex.Message);
+                Assert.AreEqual("Ingrese un apellido", ex.Message);
             }
         }
 
         [Test]
-        public void TestSeAgregoPersona()
+        public void TestSeModificoPersona()
         {
             try
             {
                 TestClass objeto = new TestClass();
-                objeto.AgregarPersona("Luis", "Veliz");
+                objeto.ModificarPersona(8, "Luis", "Veliz");
             }
             catch (Exception ex)
             {
-                Assert.AreEqual("Persona agregada", ex.Message);
+                Assert.AreEqual("Persona modificada", ex.Message);
             }
         }
 
